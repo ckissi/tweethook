@@ -1,0 +1,42 @@
+---
+const numbers = Array.from({ length: 5 }, (_, i) => i + 1);
+
+const avatars = [
+    "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=880&h=880&q=100",
+    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=687&h=687&q=80",
+    "https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=686&h=686&q=80",
+    "https://images.unsplash.com/photo-1485178575877-1a13bf489dfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=1401&h=1401&q=80",
+    "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=880&h=880&q=80",
+];
+---
+
+<div class="mt-6 flex space-x-6 items-center">
+    <div class="flex items-center">
+        {
+            avatars.map((avatar) => (
+                <img
+                    class="object-cover w-8 h-8 -mx-0.5 rounded-full ring ring-white dark:ring-gray-900"
+                    src={avatar}
+                    alt=""
+                />
+            ))
+        }
+    </div>
+    <div>
+        <div class="flex space-x-0.5">
+            {
+                numbers.map((number) => (
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-5 text-yellow-400"
+                        fill="currentColor"
+                        viewBox="0 0 256 256"
+                    >
+                        <path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z" />
+                    </svg>
+                ))
+            }
+        </div>
+        <div class="text-xs">Loved by 100+ users</div>
+    </div>
+</div>
